@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECHARTS</title>
+    <script src="https://github.com/apache/incubator-echarts/blob/master/dist/echarts.min.js"></script>
+</head>
+<body>
+<div id="example" style="width: 800px;height: 600px;"></div>
+<script>
+    var myChart = echarts.init(document.getElementById("example"));
+    myChart.setOption({
+        xAxis: {
+            type: "category",
+            data: ["2020-10-01"]
+        },
+        yAxis: {
+            type: "value",
+            scale: true
+        },
+        series: [{
+            data: [66],
+            type: "bar",
+            itemStyle: {
+                color: "blue"
+            },
+            barMinHeight: 1
+        },{
+            data: [72],
+            type: "bar",
+            itemStyle: {
+                color: "red"
+            },
+            barMinHeight: 1
+        }],
+        tooltip: {
+            trigger: "axis"
+        }
+    });
+</script>
+</body>
+</html>
